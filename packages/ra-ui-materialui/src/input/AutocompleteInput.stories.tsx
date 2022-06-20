@@ -235,6 +235,9 @@ const BookEditWithCreationSupport = () => (
                     }
                 }}
                 fullWidth
+                TextFieldProps={{
+                    placeholder: 'Start typing to create a new item',
+                }}
             />
         </SimpleForm>
     </Edit>
@@ -353,7 +356,7 @@ const CreateAuthor = () => {
                 },
             },
             {
-                onSuccess: ({ data }) => {
+                onSuccess: data => {
                     setName('');
                     setLanguage('');
                     onCreate(data);
